@@ -24,7 +24,7 @@ public class AppFibo {
 
         while(!f.isTerminou()){
             try{
-                System.out.print(". ");
+                System.out.print("& ");
                 Thread.sleep(1000);
             }catch(InterruptedException e){
                 System.out.println("Interrompido...");

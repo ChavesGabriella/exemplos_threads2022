@@ -54,7 +54,7 @@ public class Controle {
                 final String status = "Processing " + i + " of " + 10;
 
                 // Aqui serão atualizados os componentes da interface gráfica
-                    Platform.runLater(() -> {
+                    Platform.runLater(() -> { //runlater atualiza a interface pela thread principal
                         lbStatus.setText(status);
 
                         taContent.appendText(status+"\n");

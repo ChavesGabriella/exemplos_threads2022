@@ -34,7 +34,7 @@ public class Controle {
     {
 
 
-        Task<Void> task = runTask();
+        Task<Void> task = runTask();//cria um ojeto da classe task(tarefa)
 
 
         pbProgresso.progressProperty().bind(task.progressProperty());
@@ -50,7 +50,7 @@ public class Controle {
         backgroundThread.start();
     }
 
-    public Task<Void> runTask()
+    public Task<Void> runTask() //cria um objeto e sobescreve
     {
         return new Task<Void>() {
             @Override
@@ -61,7 +61,7 @@ public class Controle {
                     {
                         // Get the Status
                         final String status = "Processing " + i + " of " + 10;
-
+                        //metodos auxiliares
                         this.updateProgress(i,10); //atualiza o progresso
                         this.updateMessage(status); //atualiza a mensagem
                         Platform.runLater(new Runnable() {
